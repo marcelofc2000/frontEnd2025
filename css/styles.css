@@ -453,8 +453,6 @@ input:focus, textarea:focus{
     font-size: 1.3rem;
 }
 
-
-
 .mapa{
         border: #004E64 0.3rem solid;
         border-radius: 1rem;
@@ -472,8 +470,6 @@ footer{
     background-color: red;
     color: yellow;
 }
-
-
 
 /* Página Tours */
 #tours{
