@@ -247,7 +247,7 @@ a > i {
 }
 
 .Inicial{
-    background-image: linear-gradient(to right,rgb(0 0 0 /.5),rgb(0 0 0 /.5)), url("./images/puente.jpg");
+    background-image: linear-gradient(to right,rgb(0 0 0 /.5),rgb(0 0 0 /.5)), url("../images/puente.jpg");
     background-size: cover;
     height:75vh;
     width: 100%;
