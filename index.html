@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Buenos Aires Turismo Express" />
+    <meta property="og:description" content="Demo de sitio web de empresa de Turismo" />
+    <meta property="og:image" href="./images/LogoBate500.jpg"" />
+    <meta property="og:image:width" content="250" />
+    <meta property="og:image:height" content="250" />
+    <meta property="og:url" content="https://marcelofc2000.github.io/frontEnd2025/" />
+    <meta property="og:site_name" content="Buenos Aires Turismo Express" />
+
+
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./images/faviBate150.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Buenos Aires Turismo Express</title>
 </head>
 <body class="contenedor">
@@ -38,13 +49,12 @@
             <div class="menu">    
                     <nav >
                         <ul >
-                            <li><a href="./index.html"><i class="fa-solid fa-house"></i>   Inicio</a>
-                            <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i>  Nosotros</a> </li>
-                            </li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i>   Destacados</a></li>
-                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i>  Tours</a></li>
-                            <li><a 
-                            <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i>    Reseñas</a></li>
-                            <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i>    Contacto</a></li>
+                            <li><a href="./index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                            <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
+                            <li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i> Destacados</a></li>
+                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
+                            <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i> Reseñas</a></li>
+                            <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i> Contacto</a></li>
                         </ul>
                     </nav>
             </div>
@@ -72,7 +82,7 @@
                         Nuestra propuesta novedosa es apta para todas las edades y busca que los porteños tengan una mirada diferente sobre la ciudad que caminan diariamente.  
                         </p>
                     </div>
-                    <div class="vertical"><img src="./images/referencia1.jpg" width="100%" height="150px" alt=""></div>
+                    <div class="vertical"><img src="./images/referencia1.jpg" width="100%" height="220px" alt=""></div>
                 </div>
             </div>
 
@@ -142,65 +152,42 @@
     </section>
 
     <section id="destacados">
-        <div class="titulodestacado">
-            <h2>Paseos Imperdibles</h2>
+        <div class="dst">
+                <h2>Tour del mes</h2>
+                <h3>Viví el delta</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio autem temporibus voluptatibus enim sunt tempore aut a id repudiandae rem, magnam necessitatibus, architecto ad soluta aliquam. Ut neque eligendi odit?
+                </p>
+                <video controls width="95%">
+                <source src="./videos/delta1.MP4" type="video/mp4">
+                </video>
+                <button>
+                    <a href="./tours.html"> Ver más </a>
+                </button>
         </div>
-        <div class="vertical">
-            <h3>Viví el delta</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem, odio quis laboriosam quod architecto cum dicta, rerum doloribus rem iusto harum numquam, cupiditate necessitatibus consectetur veniam aliquam odit. Fugit.
-            </p>
-            <video controls width="75%">
-            <source src="./videos/delta1.MP4" type="video/mp4">
-            </video>
-        </div>
-        <div class="vertical">
-            <h3>Tours Destacados</h3>
-            <div class="minicard">
-                <div class="minifoto">
-                    <img src="./images/referencia2.JPEG" alt="l boca" width="50%">
-                </div>
-                <div class="vertical">
-                    <h5>La Boca</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore cupiditate totam vitae delectus.</p>
-                </div>
-            </div>
-            <div class="minicard">
-                <div class="minifoto">
-                   <img src="./images/referencia2.JPEG" alt="l boca" width="50%">
-                </div>
-                <div class="vertical">
-                    <h5>Palermo</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore cupiditate totam vitae delectus.</p>
-                </div>
-            </div>
-            <div class="minicard">
-                <div class="minifoto">
-                    <img src="./images/referencia2.JPEG" alt="l boca" width="50%">
-                </div>
-                <div class="vertical">
-                    <h5>Puerto Madero</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore cupiditate totam vitae delectus.</p>
-                </div>
+
+        <div class="dst">
+            <h2>Imperdible</h2>
+            <h3>La Boca</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti accusantium, at, impedit laborum mollitia, delectus asperiores voluptate error porro soluta alias esse illum repellat eius quo odio omnis officiis ut. </p>
+            <div class="minifoto">
+                <img src="./images/referencia3.jpg" alt="La Boca" width="95%">
             </div>
             <button>
                 <a href="./tours.html"> Ver más </a>
             </button>
         </div>
 
-
-
-        <div class="petfriendly vertical fondo2">
+            <div class="petfriendly dst">
             <h2>Somos Pet Friendly</h2>
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, exercitationem enim saepe autem incidunt odio animi ea laboriosam dignissimos numquam quae impedit. Earum illo asperiores provident, suscipit in quod ea!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, nulla accusamus, ea quod consequatur recusandae asperiores magnam dolore veniam ex aperiam veritatis temporibus laborum? Aperiam iste repellendus amet maiores accusantium?
             </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quia voluptates repellat suscipit aperiam beatae quae sequi omnis quasi eaque nostrum repudiandae, doloremque voluptas illo mollitia! Vitae labore error nobis?
-            </p>
-            <img src="./images/IMG_9495.JPEG" alt="Somos pet Friendly" width="85%">
+            <img src="./images/IMG_9495.JPEG" alt="Somos pet Friendly" width="400px">
         </div>
+    
     </section>
+
     <section id="resenias" class="fondo2">
         <div class="tituloResenia">
                 <h2>Esto opinan nuestros clientes</h2>
@@ -322,7 +309,32 @@
 </main>
 
 <footer>
-(c) MFC2025 Exclusivo
+    <div class="vertical menufoot">
+                    <nav>
+                        <ul >
+                            <li><a href="./index.html"> Inicio</a></li>
+                            <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
+                            <li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i> Destacados</a></li>
+                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
+                            <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i> Reseñas</a></li>
+                            <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i> Contacto</a></li>
+                        </ul>
+                    </nav>
+            
+    </div>
+    
+    <div class="vertical foot2"> 
+        <a href="mailto:hola@bate.com"><i class="fa-solid fa-envelope"></i></a>
+        <span><i class="fa-solid fa-phone"></i>                    (54-11) 51548777 </span>
+    </div>
+    
+    <div class="vertical foot3">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+    </div> 
 </footer>
 </body>
 </html>

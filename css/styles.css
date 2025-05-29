@@ -286,37 +286,26 @@ a > i {
 
 #destacados{
     grid-area: "destacados";
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
 }
 
-.titulodestacado{
-    grid-column: 1 / 3;
-    text-align: center;
-    margin: 0.5rem;
-    font-size: 1.8rem;
-}
-
-.minicard{
+.dst{
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    width: auto;
+    align-items: start;
+    padding-bottom: 2rem;
 }
 
-.minifoto{
-    display:flex;
-    width: 40%;
-}
 
 
 .petfriendly{
-    grid-row: 1 / 3;
-    grid-column: 3 / 4;
     border-radius: 3rem;
     padding: 1.5rem;
     background-color:#ec9e9e;
 }
-
 
 #resenias{
     grid-area: "resenias";
@@ -467,8 +456,30 @@ input:focus, textarea:focus{
 }
 
 footer{
-    background-color: red;
-    color: yellow;
+    background-color:#004E64;
+    color:white;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.menufoot{
+    display: flex;
+    flex-direction: column;
+    color: #EDEDED;
+}
+
+.menufoot > a{
+    color: #EDEDED;
+
+}
+
+.foot1{
+
+}
+
+.foot3{
+        font-size: 1rem;
+        gap: 0.5rem;
 }
 
 /* Página Tours */
