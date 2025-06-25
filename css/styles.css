@@ -247,7 +247,7 @@ a > i {
 }
 
 .Inicial{
-    background-image: linear-gradient(to right,rgb(0 0 0 /.5),rgb(0 0 0 /.5)), url("../images/puente.jpg");
+    background-image: linear-gradient(to right,rgb(0 0 0 /.5),rgb(0 0 0 /.5)), url("../images/portadaProvisoria.jpg");
     background-size: cover;
     height:75vh;
     width: 100%;
@@ -299,8 +299,6 @@ a > i {
     padding-bottom: 2rem;
 }
 
-
-
 .petfriendly{
     border-radius: 3rem;
     padding: 1.5rem;
@@ -326,6 +324,10 @@ a > i {
                 column-gap: 3rem;
                 display: grid;
                 place-items: center;
+}
+
+.cardRes:hover {
+    transform: translateY(-1.3rem)
 }
 
 .cardRes{
@@ -506,6 +508,11 @@ footer{
     padding-bottom: 2rem;
     border: #004E64 solid 0.2rem;
     box-shadow: gray 0.5rem 0.5rem;
+}
+
+.cardTours:hover {
+    transform: translateY(-1.3rem);
+    background-color: #ec9e9e;
 }
 
 .cardTours > img{
