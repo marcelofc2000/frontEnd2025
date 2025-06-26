@@ -1,55 +1,72 @@
-/* trabajar con una lista */
-//creamos una variable que guarda una lista de elementos
-//cada elemento de la lista es 
-let productos = [
+let tours = [
     {
-        nombre: "Laptop A", 
-        descripcion: "asñdlkfas ñasdfjñsd ",
-        precio: 5000,
-        descuento: true
+        nombre: "Puerto Madero",
+        horario: "viernes 9 a 13",
+        precio: "$7.000.-",
+        foto: "puertoMadero",
     },
-    {nombre: "Celular A", descuento: false},
-    {nombre: "Tablet A", descuento: true},
-    {nombre: "Laptop B", descuento: true},
-    {nombre: "Celular B", descuento: false},
-    {nombre: "Tablet B", descuento: true},
-    {nombre: "Laptop C", descuento: false},
-    {nombre: "Celular C", descuento: true},
-    {nombre: "Tablet C", descuento: false},
-];
+    {
+        nombre: "Delta del Tigre",
+        horario: "sábado 9 a 13",
+        precio: "$12.000.-",
+        foto: "deltaTigre",
+    },
+    {
+        nombre: "Centro histórico",
+        horario: "sábado 12 a 15",
+        precio: "$6.000.-",
+        foto: "centroHistorico",
+    },
+    {
+        nombre: "San Telmo",
+        horario: "domingo 12 a 15",
+        precio: "$7.000.-",
+        foto: "sanTelmo",
+    },
+    {
+        nombre: "La Boca",
+        horario: "domingo 16 a 18",
+        precio: "$9.000.-",
+        foto: "laBoca",
+    },    
+    {
+        nombre: "Obelisco",
+        horario: "sab y dom 9 a 12",
+        precio: "$9.000.-",
+        foto: "obelisco",
+    },
+    {
+        nombre: "Palermo",
+        horario: "sab y dom 14 a 18",
+        precio: "$10.000.-",
+        foto: "palermo",
+    },
+    {
+        nombre: "Recoleta",
+        horario: "viernes 14 a 17",
+        precio: "$8.000.-",
+        foto: "recoleta",
+    },
+    {
+        nombre: "Belgrano",
+        horario: "sábado 14 a 17",
+        precio: "$9.000.-",
+        foto: "belgrano",
+    },
+    {
+        nombre: "Vicente López",
+        horario: "sábado 9 a 13",
+        precio: "$7.000.-",
+        foto: "vLopez",
+    },
+]
 
-//practicamos en la consola
-//para acceder a los productos de la lista usamos la siguiente forma
-console.log("Producto 1 - nombre: " + productos[0]["nombre"] + " - descuento: " + productos[0]["descuento"]);
-console.log("Producto 2 - nombre: " + productos[1]["nombre"] + " - descuento: " + productos[1]["descuento"]);
-console.log("Producto 3 - nombre: " + productos[2]["nombre"] + " - descuento: " + productos[2]["descuento"]);
-//... y así sucesivamente
-
-//lo mismo pero con estructura de repetición
-console.log("Usando for")
-for (let contador = 0; contador < productos.length; contador++) {
-    console.log("Producto" + (contador + 1) + " - nombre: " + productos[contador]["nombre"] + " - descuento: " + productos[contador]["descuento"]);
-}
-
-//en la página
-//todos los productos
-let todosLosProductos = document.getElementById("todosLosProductos");
-for (let contador = 0; contador < productos.length; contador++) {
-    todosLosProductos.innerHTML = todosLosProductos.innerHTML + "Producto" + (contador + 1) + " - nombre: " + productos[contador]["nombre"] + " - descuento: " + productos[contador]["descuento"] + "<br>";
-}
-
-//productos con descuento
-let conDescuento = document.getElementById("conDescuento");
-for (let contador = 0; contador < productos.length; contador++) {
-    if (productos[contador]["descuento"] === true) {
-        conDescuento.innerHTML = conDescuento.innerHTML + "Producto" + (contador + 1) + " - nombre: " + productos[contador]["nombre"] + " - descuento: " + productos[contador]["descuento"] + "<br>";
-    }
-}
-
-//productos sin descuento
-let sinDescuento = document.getElementById("sinDescuento");
-for (let contador = 0; contador < productos.length; contador++) {
-    if (productos[contador]["descuento"] === false) {
-        sinDescuento.innerHTML = sinDescuento.innerHTML + "Producto" + (contador + 1) + " - nombre: " + productos[contador]["nombre"] + " - descuento: " + productos[contador]["descuento"] + "<br>";
-    }
+let todosLosTours = document.getElementById("contTours");
+for (let contador = 0; contador < tours.length; contador++) {
+    todosLosTours.innerHTML = todosLosTours.innerHTML + "<div class='cardTours'>"  +
+                    "<img src='./images/" + tours[contador]["foto"] + ".jpg' alt='" + tours[contador]["nombre"] + "' >" +
+                    "<h3>" + tours[contador]["nombre"] + "</h3>" +
+                    "<span>" + tours[contador]["horario"] + "</span>" +
+                    "<h5>" + tours[contador]["precio"] + "</h5>" + 
+                    "</div>"
 }

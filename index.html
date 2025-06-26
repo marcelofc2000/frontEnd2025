@@ -49,12 +49,12 @@
             <div class="menu">    
                     <nav >
                         <ul >
-                            <li><a href="./index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                            <li><a href="./index.html#inicial"><i class="fa-solid fa-house"></i> Inicio</a></li>
                             <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
                             <li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i> Destacados</a></li>
-                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
                             <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i> Reseñas</a></li>
                             <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i> Contacto</a></li>
+                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
                         </ul>
                     </nav>
             </div>
@@ -62,7 +62,7 @@
         </header>
 
 <main>
-        <section class="Inicial">
+        <section id="inicial">
             <section class="titular">
                 <h1>Buenos Aires Turismo Express</h1>
                 <h4>Actividades preparadas especialmente para vos</h4>
@@ -102,7 +102,7 @@
                     </tr>
                     <tr>
                         <td>Delta</td>
-                        <td rowspan="2">Sábado</td>
+                        <td rowspan="2">Sábados</td>
                         <td>12.000.-</td>
                     </tr>
                     <tr>
@@ -112,7 +112,7 @@
                     </tr>
                     <tr>
                         <td>San Telmo</td>
-                        <td rowspan="2">Domingo</td>
+                        <td rowspan="2">Domingos</td>
                         <td>7.000.-</td>
                     </tr>
                     <tr>
@@ -156,8 +156,9 @@
                 <h2>Tour del mes</h2>
                 <h3>Viví el delta</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio autem temporibus voluptatibus enim sunt tempore aut a id repudiandae rem, magnam necessitatibus, architecto ad soluta aliquam. Ut neque eligendi odit?
+                    Si creías conocer todo y que para disfrutar de la naturaleza salvaje implicaba viajar varias horas desde Buenos Aires, esta salida es para vos.
                 </p>
+                <p>Conocerás el Delta como nunca nadie lo había mostrado.  Un paseo distinto a todos los que hiciste. ¿Cuándo venís?</p>
                 <video controls width="95%">
                 <source src="./videos/delta1.MP4" type="video/mp4">
                 </video>
@@ -169,21 +170,25 @@
         <div class="dst">
             <h2>Imperdible</h2>
             <h3>La Boca</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti accusantium, at, impedit laborum mollitia, delectus asperiores voluptate error porro soluta alias esse illum repellat eius quo odio omnis officiis ut. </p>
-            <div class="minifoto">
-                <img src="./images/referencia3.jpg" alt="La Boca" width="95%">
+            <p>Si querés descubrir el barrio más pintoresco de la ciudad desde un costado que no te imaginabas que existía, no podés perderte este paseo.</p>
+            <p>Ofrecemos una salida muy novedosa que te sorprenderá desde el primero hasta el último paso.  ¡No te la pierdas!
+            </p>
+            <div class="fotoCentrada" >
+                <img src="./images/caminito.jpg" alt="La Boca">
             </div>
             <button>
                 <a href="./tours.html"> Ver más </a>
             </button>
         </div>
 
-            <div class="petfriendly dst">
+            <div class="petfriendly dstpf">
             <h2>Somos Pet Friendly</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, nulla accusamus, ea quod consequatur recusandae asperiores magnam dolore veniam ex aperiam veritatis temporibus laborum? Aperiam iste repellendus amet maiores accusantium?
+                Si dudabas venir o no porque no querías dejar sola a tu mascota, con nuestras salidas no tenés excusas.
             </p>
-            <img src="./images/IMG_9495.JPEG" alt="Somos pet Friendly" width="400px">
+            <p>Todos nuestros paseos son aptos para realizar con tu mascota y no importa el tamaño. Sólo tiene que portarse bien y tener muchas ganas de disfrutar 
+            </p>
+            <img src="./images/petFriendly.jpg" alt="Somos pet Friendly" width="400px">
         </div>
     
     </section>
@@ -203,7 +208,7 @@
                             <i class="fa-solid fa-star"></i>
                         </span>
                         <span>Julieta Soler</span>
-                        <p>Hagan el tour del Delta.  Es un viaje al centro de la naturaleza</p>
+                        <p>Recomiendo el tour del Delta.  Es un viaje al centro de la naturaleza</p>
             </div>
             <div class="cardRes">
                 <img src="./images/fotoRes1.jpg" alt="Reseña 2">
@@ -251,7 +256,7 @@
                             <i class="fa-solid fa-star"></i>
                         </span>
                         <span>Adriana Mayor</span>
-                        <p>El tour del Obelisco es lo más.  Pronto haré otro de los tours</p>
+                        <p>El tour del Obelisco es lo más.  Pronto haré otro de los paseos</p>
             </div>
         </div>
     </section>
@@ -265,7 +270,6 @@
                 <p>También nos podés visitar en nuestra sucursal Obelisco todos los días de 9 a 18</p>
             </div>
             <form action="" method="POST" class="contenedorFrm"> 
-                    <!-- acá tien  que ir un div que una el cuerpo del formulario -->
                     <div class="data"> 
                     
                         <div class="grupoFrm">
@@ -297,15 +301,11 @@
         </div>  
         <div class="mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0182801979154!2d-58.38417712350351!3d-34.60369925749864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1748215653863!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
         </div>
     </section>
-   
     <div class="flotante">
-            <a href="https://wa.me/541151548777" target="_blank"><img class="flotante" src="./images/logoWhatsapp.png" alt="Dejanos tu mensaje"></a>
+        <a href="https://wa.me/541151548777" target="_blank"><img class="flotante" src="./images/logoWhatsapp.png" alt="Dejanos tu mensaje"></a>
     </div>
-
-
 </main>
 
 <footer>

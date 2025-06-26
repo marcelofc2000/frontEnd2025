@@ -191,8 +191,6 @@ i:hover{
     color:#ff6b6b
 }
 
-
-
 .Fila2{
     display: flex;
     width: 100%;
@@ -246,8 +244,8 @@ a > i {
     color: #ff6b6b;
 }
 
-.Inicial{
-    background-image: linear-gradient(to right,rgb(0 0 0 /.5),rgb(0 0 0 /.5)), url("../images/portadaProvisoria.jpg");
+#inicial{
+    background-image: linear-gradient(to right,rgb(0 0 0 /.3),rgb(0 0 0 /.3)), url("../images/portadaGral.jpg");
     background-size: cover;
     height:75vh;
     width: 100%;
@@ -263,10 +261,16 @@ a > i {
     align-items: center;
     flex-direction: column;
     align-content: center;
+    background-color: #004e644a;
 }
 
-.titular > h1, h4{
+.titular > h1{
     color: #EDEDED;
+}
+
+.titular > h4{
+    color: #ec9e9e;
+    font-size: 1.5rem;
 }
 
 #presentacion{
@@ -296,7 +300,27 @@ a > i {
     flex-direction: column;
     width: auto;
     align-items: start;
-    padding-bottom: 2rem;
+}
+
+.dstpf{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: start;
+    padding-top: 2rem;
+}
+
+.dst > h2 {
+    border-bottom: #ff6b6b 0.25rem solid;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+.fotoCentrada{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    object-fit: cover;
 }
 
 .petfriendly{
@@ -314,8 +338,7 @@ a > i {
 .tituloResenia{
                 display: flex;
                 justify-content: center;
-                padding-bottom: 2rem;
-                
+                padding-bottom: 2rem;                
 }
 
 .reseniaCards{
@@ -450,7 +473,7 @@ input:focus, textarea:focus{
 }
 
 .flotante{
-    width: 4rem;
+    width: 3.5rem;
     position: fixed;
     bottom: 5%;
     right: 5%;
@@ -472,10 +495,7 @@ footer{
 
 .menufoot > a{
     color: #EDEDED;
-
 }
-
-
 
 .foot3{
         font-size: 1rem;
@@ -488,10 +508,9 @@ footer{
     flex-direction: column;
     row-gap: 5rem;
     align-items: center;
-
 }
 
-.contTours{
+#contTours{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -499,28 +518,35 @@ footer{
 }
 
 .cardTours{
-    border: solid black 2px;
     border-radius: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: autow;
+    width: auto;
     padding-bottom: 2rem;
     border: #004E64 solid 0.2rem;
-    box-shadow: gray 0.5rem 0.5rem;
+    box-shadow: gray 0.3rem 0.3rem;
 }
 
 .cardTours:hover {
-    transform: translateY(-1.3rem);
-    background-color: #ec9e9e;
+    transform: translateY(-0.8rem);
+    background-color: #ec9e9e96;
 }
 
 .cardTours > img{
-                border-radius: 3rem 3rem 0 0 ;
+                border-radius: 2.9rem 2.9rem 0 0 ;
                 margin-bottom: 2rem;
 }
 
 .cardTours > h3{
                 border-bottom: #ff6b6b 0.4rem solid;
                 margin-bottom: 0.5rem;
+                text-shadow: 1px 1px #ff6b6b ;
+}
+
+#contTours2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
