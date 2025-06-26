@@ -302,6 +302,20 @@ a > i {
     align-items: start;
 }
 
+.dst > h2 {
+    border-bottom: #ff6b6b 0.25rem solid;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.fotoCentrada{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+}
 .dstpf{
     display: flex;
     flex-direction: column;
@@ -310,18 +324,6 @@ a > i {
     padding-top: 2rem;
 }
 
-.dst > h2 {
-    border-bottom: #ff6b6b 0.25rem solid;
-    width: 100%;
-    padding-bottom: 0.5rem;
-    margin-bottom: 2.5rem;
-}
-.fotoCentrada{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    object-fit: cover;
-}
 
 .petfriendly{
     border-radius: 3rem;
