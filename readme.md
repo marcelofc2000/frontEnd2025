@@ -3,15 +3,12 @@ En este proyecto se aplicarán los conceptos aprendidos en clase, simulando una 
 Se utilizarán las etiquetas semánticas de HTML para darle una estructura y luego se aplicará CSS para hacerlo visualmente estético y con Javascript tendrá la interactividad necesaria.
 
 Tareas pendientes
-1) falta hacerlo responsive
+1) Hacerlo responsive
 
-2) Falta editar el video definitivo
+2) Obtener y colocar la foto de portada definitiva
 
-3) Falta maquetar el footer
+3) Editar el video definitivo
 
-4) Falta el carrito de compras
+4) Maquetación del footer
 
-
-
-
-
+5) Carrito de compras
