@@ -46,8 +46,23 @@
             <div class="subfila2b">
                 <img id="logo"  src="./images/LogoBate500.jpg" alt="Buenos Aires Turismo Express | BATE">
             </div>
-            <div class="menu">    
-                    <nav >
+
+            <!-- acá empiezan los menúes -->
+            <div class="menu">   
+                <button id="hamburguesa"><i class="fa-solid fa-bars"></i></button>
+                <!-- Menú para PC -->
+                    <nav class="menu-pc">
+                        <ul >
+                            <li><a href="./index.html#inicial"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                            <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
+                            <li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i> Destacados</a></li>
+                            <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i> Reseñas</a></li>
+                            <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i> Contacto</a></li>
+                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Menú sólo visible en Mobile -->
+                    <nav id="menuResponsive">
                         <ul >
                             <li><a href="./index.html#inicial"><i class="fa-solid fa-house"></i> Inicio</a></li>
                             <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
@@ -72,8 +87,38 @@
 
 
 <script src="js/scripts.js"></script>
-<footer>
-(c) MFC2025 Exclusivo
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="col logo">
+      <img src="./images/LogoBate500.jpg" alt="Logo BATE" />
+    </div>
+    <div class="col contacto">
+      <p><i class="fa-solid fa-envelope"></i> hola@bate.com</p>
+      <p><i class="fa-solid fa-phone"></i> (54-11) 5154-8777</p>
+      <div class="redes">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+      </div>
+    </div>
+    <div class="col enlaces">
+      <a href="./index.html#inicial">Inicio</a>
+      <a href="./index.html#presentacion">Nosotros</a>
+      <a href="./index.html#destacados">Destacados</a>
+      <a href="./tours.html">Tours</a>
+    </div>
+    <div class="col legales">
+      <a href="./terminos.html">Términos y Condiciones</a>
+      <a href="./privacidad.html">Política de Privacidad</a>
+    </div>
+  </div>
+
+  <div class="copy">
+    &copy; 2025 Buenos Aires Turismo Express - Todos los derechos reservados.
+  </div>
 </footer>
 </body>
 </html>

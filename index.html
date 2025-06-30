@@ -39,15 +39,27 @@
                     <i class="fa-brands fa-tiktok"></i>
                     <i class="fa-brands fa-x-twitter"></i>
                 </div>
-            
-            
         </div>
         <div class="Fila2">
             <div class="subfila2b">
                 <img id="logo"  src="./images/LogoBate500.jpg" alt="Buenos Aires Turismo Express | BATE">
             </div>
-            <div class="menu">    
-                    <nav >
+            <!-- acá empiezan los menúes -->
+            <div class="menu">   
+                <button id="hamburguesa"><i class="fa-solid fa-bars"></i></button>
+                <!-- Menú para PC -->
+                    <nav class="menu-pc">
+                        <ul >
+                            <li><a href="./index.html#inicial"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                            <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
+                            <li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i> Destacados</a></li>
+                            <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i> Reseñas</a></li>
+                            <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i> Contacto</a></li>
+                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Menú sólo visible en Mobile -->
+                    <nav id="menuResponsive">
                         <ul >
                             <li><a href="./index.html#inicial"><i class="fa-solid fa-house"></i> Inicio</a></li>
                             <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
@@ -63,10 +75,10 @@
 
 <main>
         <section id="inicial">
-            <section class="titular">
+            <div class="titular">
                 <h1>Buenos Aires Turismo Express</h1>
                 <h4>Actividades preparadas especialmente para vos</h4>
-            </section>
+            </div>
         </section>
         
         <section id="presentacion"    class="fondo2">
@@ -263,81 +275,81 @@
             </div>
         </div>
     </section>
+
     <section id="contacto">
-        <div class="vertical">
-            <div>
-                <h2>Dejanos tu mensaje</h2>
+        <div class="mensaje-section">
+            <h2>Dejanos tu mensaje</h2>
+            <p>Si querés recibir más información de nuestros paseos, dejanos tu mensaje y a la brevedad nos comunicaremos con vos.
+            </p>
+            <p>También nos podés visitar en nuestra sucursal Obelisco todos los días de 9 a 18.
+            </p>
+        <form action="https://formspree.io/f/mgvkjllo" method="POST" class="formulario-contacto">
+            <div class="form-columna">
+                <div class="grupoFrm">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribí tu nombre" />
+                </div>
+                    <div class="grupoFrm">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Escribí tu email" />
+                </div>
+                <div class="grupoFrm">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Escribí tu teléfono" />
+                </div>
             </div>
-            <div>
-                <p>Si querés recibir más información de nuestros paseos, dejanos tu mensaje y a la brevedad nos comunicaremos con vos.</p>
-                <p>También nos podés visitar en nuestra sucursal Obelisco todos los días de 9 a 18</p>
+            <div class="form-columna mensaje">
+                <div class="grupoFrm">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Dejanos tu mensaje"></textarea>
+                </div>
             </div>
-            <form action="" method="POST" class="contenedorFrm"> 
-                    <div class="data"> 
-                    
-                        <div class="grupoFrm">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre"> 
-                        </div>
+            <div class="form-boton">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
 
-                        <div class="grupoFrm">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Escribí tu email"> 
-                        </div>
-
-                        <div class="grupoFrm">
-                        <label for="telefono">Teléfono</label>
-                        <input type="number" name="telefono" id="telefono" placeholder="Escribí tu teléfono"> 
-                        </div>
-                    </div>
-                    <div class="msg">
-                        <div class="grupoFrm">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea name="mensaje" id="mensaje"  placeholder="Dejanos tu mensaje"></textarea>
-                        </div>
-                    </div>   
-                        <div class="bot">
-                        <button type="submit">Enviar</button> 
-                        </div>
-                    
-            </form>
-        </div>  
-        <div class="mapa">
+    <div class="mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0182801979154!2d-58.38417712350351!3d-34.60369925749864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1748215653863!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+    </div>
     </section>
+
     <div class="flotante">
         <a href="https://wa.me/541151548777" target="_blank"><img class="flotante" src="./images/logoWhatsapp.png" alt="Dejanos tu mensaje"></a>
     </div>
 </main>
-
-<footer>
-    <div class="vertical menufoot">
-                    <nav>
-                        <ul >
-                            <li><a href="./index.html"> Inicio</a></li>
-                            <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
-                            <li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i> Destacados</a></li>
-                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
-                            <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i> Reseñas</a></li>
-                            <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i> Contacto</a></li>
-                        </ul>
-                    </nav>
-            
+<script src="js/scriptmenu.js"></script>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="col logo">
+            <img src="./images/LogoBate500.jpg" alt="Logo BATE" />
+        </div>
+        <div class="col contacto">
+            <p><i class="fa-solid fa-envelope"></i> hola@bate.com</p>
+            <p><i class="fa-solid fa-phone"></i> (54-11) 5154-8777</p>
+            <div class="redes">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+        </div>
     </div>
-    
-    <div class="vertical foot2"> 
-        <a href="mailto:hola@bate.com"><i class="fa-solid fa-envelope"></i></a>
-        <span><i class="fa-solid fa-phone"></i>                    (54-11) 51548777 </span>
+    <div class="col enlaces">
+        <a href="./index.html#inicial">Inicio</a>
+        <a href="./index.html#presentacion">Nosotros</a>
+        <a href="./index.html#destacados">Destacados</a>
+        <a href="./tours.html">Tours</a>
     </div>
-    
-    <div class="vertical foot3">
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-youtube"></i>
-        <i class="fa-brands fa-tiktok"></i>
-        <i class="fa-brands fa-x-twitter"></i>
-    </div> 
+    <div class="col legales">
+        <a href="./terminos.html">Términos y Condiciones</a>
+        <a href="./privacidad.html">Política de Privacidad</a>
+    </div>
+    </div>
+    <div class="copy">
+        &copy; 2025 Buenos Aires Turismo Express - Todos los derechos reservados.
+    </div>
 </footer>
 </body>
 </html>

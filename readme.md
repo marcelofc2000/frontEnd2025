@@ -1,14 +1,13 @@
 Proyecto Integrador realizado por Marcelo Campisi para Talento Tech, curso de Front End JS 2025.
 En este proyecto se aplicarán los conceptos aprendidos en clase, simulando una empresa de turismo que realiza diversos tours en la Ciudad de Buenos Aires y Alrededores.
 Se utilizarán las etiquetas semánticas de HTML para darle una estructura y luego se aplicará CSS para hacerlo visualmente estético y con Javascript tendrá la interactividad necesaria.
+Las fotos, los videos y los textos utilizados en el proyecto son todos propios.  Los paseos, horarios y tarifas son inventados y si existieran paseos con esas características es pura casualidad.
 
 Tareas pendientes
-1) Hacerlo responsive
-
-2) Obtener y colocar la foto de portada definitiva
+1) Revisar las secciones que faltan sean responsivas
 
 3) Editar el video definitivo
 
-4) Maquetación del footer
+4) Ajustar el footer y páginas legales
 
 5) Carrito de compras
