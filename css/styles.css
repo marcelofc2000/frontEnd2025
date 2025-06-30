@@ -628,6 +628,12 @@ input:focus, textarea:focus{
 .buttonCard:hover{
     background-color: #004E64;
     color: #ff6b6b;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
 }
 
 #contTours2{
