@@ -59,7 +59,7 @@ let tours = [
         nombre: "Vicente López",
         horario: "sábado 9 a 13",
         precio: "$7.000.-",
-        foto: "vLopez",
+        foto: "vlpz",
     },
 ]
 
