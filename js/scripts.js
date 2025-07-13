@@ -1,96 +1,219 @@
-let tours = [
+const tours = [
     {
+        id: "PM",
         nombre: "Puerto Madero",
         horario: "viernes 9 a 13",
-        precio: "$7.000.-",
-        foto: "puertoMadero",
-        descripcion:"Recorremos el puerto que no pudo ser antes de ser inaugurado.  Descubriremos como se recuperó el para el turismo y se creó un espacio para los habitantes con la reserva ecológica",
+        precio: "7000",
+        foto: "./images/puertoMadero.jpg",
+        alt: "Foto de Puerto Madero",
     },
     {
+        id: "DT",
         nombre: "Delta del Tigre",
         horario: "sábado 9 a 13",
-        precio: "$12.000.-",
-        foto: "deltaTigre",
-        descripcion:"Te invitamos a descubrir el delta de una manera que nunca lo viviste.  Una experiencia única en donde todos tus sentidos se activarán desde que partimos"
+        precio: "12000",
+        foto: "./images/deltaTigre.jpg",
+        alt: "Foto del Delta de Tigre",
     },
     {
+        id: "CH",
         nombre: "Centro histórico",
         horario: "sábado 12 a 15",
-        precio: "$6.000.-",
-        foto: "centroHistorico",
+        precio: "6000",
+        foto: "./images/centroHistorico.jpg",
+        alt: "Foto del Cabildo",
     },
     {
+        id: "ST",
         nombre: "San Telmo",
         horario: "domingo 12 a 15",
-        precio: "$7.000.-",
-        foto: "sanTelmo",
+        precio: "7000",
+        foto: "./images/sanTelmo.jpg",
+        alt: "Foto de San Telmo",
     },
     {
+        id: "LB",
         nombre: "La Boca",
         horario: "domingo 16 a 18",
-        precio: "$9.000.-",
-        foto: "laBoca",
-    },    
+        precio: "9000",
+        foto: "./images/laBoca.jpg",
+        alt: "Foto de La Boca",
+    },
     {
+        id: "OB",
         nombre: "Obelisco",
         horario: "sab y dom 9 a 12",
-        precio: "$9.000.-",
-        foto: "obelisco",
+        precio: "9000",
+        foto: "./images/obelisco.jpg",
+        alt: "Foto de vista desde el Obelisco",
     },
     {
+        id: "PA",
         nombre: "Palermo",
         horario: "sab y dom 14 a 18",
-        precio: "$10.000.-",
-        foto: "palermo",
+        precio: "10000",
+        foto: "./images/palermo.jpg",
+        alt: "Foto del barrio de Palermo",
     },
     {
+        id: "RE",
         nombre: "Recoleta",
         horario: "viernes 14 a 17",
-        precio: "$8.000.-",
-        foto: "recoleta",
+        precio: "8000",
+        foto: "./images/recoleta.jpg",
+        alt: "Foto del barrio de Recoleta",
     },
     {
+        id: "BE",
         nombre: "Belgrano",
         horario: "sábado 14 a 17",
-        precio: "$9.000.-",
-        foto: "belgrano",
+        precio: "9000",
+        foto: "./images/belgrano.jpg",
+        alt: "Foto del barrio de Belgrano",
     },
     {
+        id: "VL",
         nombre: "Vicente López",
         horario: "sábado 9 a 13",
-        precio: "$7.000.-",
-        foto: "vlpz",
+        precio: "7000",
+        foto: "./images/vlpz.jpg",
+        alt: "Foto de la costa de Vicente López",
     },
-]
+];
 
-let todosLosTours = document.getElementById("contTours");
-for (let contador = 0; contador < tours.length; contador++) {
-    todosLosTours.innerHTML = todosLosTours.innerHTML + "<div class='cardTours'>"  +
-                    "<img src='./images/" + tours[contador]["foto"] + ".jpg' alt='" + tours[contador]["nombre"] + "' >" +
-                    "<h3>" + tours[contador]["nombre"] + "</h3>" +
-                    "<span>" + tours[contador]["horario"] + "</span>" +
-                    "<h5>" + tours[contador]["precio"] + "</h5>" 
-                    + "<div class='separaBotones'><button class='buttonCard'><a href='#'> Ver </a></button>" + "<button class='buttonCard'><a href='#'> comprar </a></button></div>" + 
-                    "</div>" 
+let carrito = [];
+
+function agregarTourAlCarrito(idTour) {
+    let tourEnCarrito = carrito.find(tour => tour.id === idTour);
+
+    if (tourEnCarrito) {
+        tourEnCarrito.cantidad++;
+    } else {
+        const tourOriginal = tours.find(tour => tour.id === idTour);
+        if (!tourOriginal) {
+            console.error(`No se encontró el tour con id ${idTour}`);
+            return;
+        }
+        carrito.push({ ...tourOriginal, cantidad: 1 });
+    }
+
+    actualizarCarritoHTML();
 }
 
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('hamburguesa');
-  const menu = document.getElementById('menuResponsive');
-
-  btn.addEventListener('click', () => {
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  });
-
-  // Para cerrar menú al hacer clic fuera
-  document.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.style.display = 'none';
+function manejarClicComprar(evento) {
+    if (evento.target.classList.contains("buttonCard")) {
+        const tourId = evento.target.dataset.id;
+        agregarTourAlCarrito(tourId);
     }
-  });
-});
+}
 
+function agregarTours() {
+    const divTours = document.getElementById("contTours");
+
+    for (const tour of tours) {
+        divTours.insertAdjacentHTML("beforeend",
+            `
+            <div class="cardTours">
+                <img src="${tour.foto}" alt="${tour.alt}">
+                <h3>${tour.nombre}</h3>
+                <span>${tour.horario}</span>
+                <h5>$${tour.precio}</h5> 
+                <button class="buttonCard" type="button" data-id="${tour.id}">Comprar</button> 
+            </div>
+            `
+        );
+    }
+
+    divTours.addEventListener("click", manejarClicComprar);
+}
+
+function manejarClicCarrito(evento) {
+    const target = evento.target;
+
+    if (target.dataset && target.dataset.id && target.dataset.action) {
+        const tourId = target.dataset.id;
+        const accion = target.dataset.action;
+
+        if (accion === "eliminar") {
+            eliminarProductoDelCarrito(tourId);
+        } else if (accion === "restar") {
+            restarCantidadProducto(tourId);
+        } else if (accion === "sumar") {
+            sumarCantidadProducto(tourId);
+        }
+    }
+}
+
+function actualizarCarritoHTML() {
+    const carritoCompras = document.querySelector(".carritoCompras");
+
+    if (!carritoCompras) {
+        console.error("No se encontró el contenedor del carrito");
+        return;
+    }
+
+    carritoCompras.innerHTML = `
+        <h3>Tu Compra</h3>
+        <ul class="lista-carrito"></ul>
+        <p class="total-carrito"></p>
+        <p class="cantidad-carrito"></p>
+    `;
+
+    const listaCarrito = carritoCompras.querySelector(".lista-carrito");
+    let totalPagar = 0;
+    let cantidadProductosUnicos = 0;
+
+    if (carrito.length === 0) {
+        listaCarrito.innerHTML = "<p>El carrito está vacío.</p>";
+    } else {
+        for (const item of carrito) {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <span>${item.nombre} - $${item.precio} x ${item.cantidad}</span>
+                <div>
+                    <button class="btn-cantidad" data-id="${item.id}" data-action="restar"><i class="fa-solid fa-minus"></i></button>
+                    <button class="btn-cantidad" data-id="${item.id}" data-action="sumar"><i class="fa-solid fa-plus"></i></button>
+                    <button class="btn-eliminar" data-id="${item.id}" data-action="eliminar"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            `;
+            listaCarrito.appendChild(li);
+
+            totalPagar += parseInt(item.precio) * item.cantidad;
+            cantidadProductosUnicos++;
+        }
+    }
+
+    carritoCompras.querySelector(".total-carrito").textContent = `Total a pagar: $${totalPagar}.-`;
+    carritoCompras.querySelector(".cantidad-carrito").textContent = `Tours Elegidos: ${cantidadProductosUnicos}`;
+
+    listaCarrito.addEventListener("click", manejarClicCarrito);
+}
+
+function sumarCantidadProducto(idProducto) {
+    const producto = carrito.find(item => item.id === idProducto);
+    if (producto) {
+        producto.cantidad++;
+        actualizarCarritoHTML();
+    }
+}
+
+function restarCantidadProducto(idProducto) {
+    const producto = carrito.find(item => item.id === idProducto);
+    if (producto) {
+        producto.cantidad--;
+        if (producto.cantidad <= 0) {
+            eliminarProductoDelCarrito(idProducto);
+        } else {
+            actualizarCarritoHTML();
+        }
+    }
+}
+
+function eliminarProductoDelCarrito(idProducto) {
+    carrito = carrito.filter(item => item.id !== idProducto);
+    actualizarCarritoHTML();
+}
+
+// Inicialización
+agregarTours();
+actualizarCarritoHTML();

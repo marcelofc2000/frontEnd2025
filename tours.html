@@ -16,7 +16,8 @@
 
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./images/faviBate150.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -25,53 +26,38 @@
 <body>
 <header>
         <div class="Fila1">
-                <div id="viascontacto">
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:hola@bate.com">  hola@bate.com</a>      
-                    <span> | </span> 
-                    <i class="fa-solid fa-phone"></i>
-                    <span> (54-11) 51548777 </span>
-                </div>
-                <div id="redes">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-tiktok"></i>
-                    <i class="fa-brands fa-x-twitter"></i>
-                </div>
-            
-            
+            <div id="viascontacto">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:hola@bate.com">  hola@bate.com</a>      
+                <span> | </span> 
+                <i class="fa-solid fa-phone"></i>
+                <span> (54-11) 51548777 </span>
+            </div>
+            <div id="redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>         
         </div>
         <div class="Fila2">
             <div class="subfila2b">
                 <img id="logo"  src="./images/LogoBate500.jpg" alt="Buenos Aires Turismo Express | BATE">
             </div>
-
-            <!-- acá empiezan los menúes -->
-            <div class="menu">   
-                <button id="hamburguesa"><i class="fa-solid fa-bars"></i></button>
-                <!-- Menú para PC -->
-                    <nav class="menu-pc">
-                        <ul >
-                            <li><a href="./index.html#inicial"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                            <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
-                            <li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i> Destacados</a></li>
-                            <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i> Reseñas</a></li>
-                            <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i> Contacto</a></li>
-                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
-                        </ul>
-                    </nav>
-                    <!-- Menú sólo visible en Mobile -->
-                    <nav id="menuResponsive">
-                        <ul >
-                            <li><a href="./index.html#inicial"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                            <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
-                            <li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i> Destacados</a></li>
-                            <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i> Reseñas</a></li>
-                            <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i> Contacto</a></li>
-                            <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
-                        </ul>
-                    </nav>
+            <!-- Menú -->
+            <div class="menu">
+            <nav class="menu-completo">   
+                <button id="hamburguesa"><i id="icono-menu" class="fa-solid fa-bars"></i></button>
+                  <ul id="menuItems">
+                    <li><a href="./index.html#inicial"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="./index.html#presentacion"><i class="fa-solid fa-users"></i> Nosotros</a> </li>
+                    <li><a href="./index.html#destacados"><i class="fa-solid fa-star-of-life"></i> Destacados</a></li>
+                    <li><a href="./index.html#resenias"><i class="fa-solid fa-comments"></i> Reseñas</a></li>
+                    <li><a href="./index.html#contacto"><i class="fa-solid fa-pen-to-square"></i> Contacto</a></li>
+                    <li><a href="./tours.html"><i class="fa-solid fa-bus-simple"></i> Tours</a></li>
+                  </ul>
+            </nav>
             </div>
         </div>
 </header>
@@ -81,12 +67,26 @@
         <div id="contTours"></div>
 </section>
 
+<section class="carritoCompras">
+</section>
+
+
+
+
+
+
+
 <div class="flotante">
     <a href="https://wa.me/541151548777" target="_blank"><img class="flotante" src="./images/logoWhatsapp.png" alt="Dejanos tu mensaje"></a>
 </div>
 
 
-<script src="js/scripts.js"></script>
+
+
+
+
+
+
 
 <footer class="footer">
   <div class="footer-content">
@@ -120,5 +120,9 @@
     &copy; 2025 Buenos Aires Turismo Express - Todos los derechos reservados.
   </div>
 </footer>
+<!-- <script src="js/scripts.js"></script> -->
+<script src="js/scriptmenu.js"></script>
+<script src="js/scripts.js"></script>
+
 </body>
 </html>

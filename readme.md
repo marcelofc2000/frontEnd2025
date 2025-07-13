@@ -6,8 +6,6 @@ Las fotos, los videos y los textos utilizados en el proyecto son todos propios. 
 Tareas pendientes
 1) Revisar las secciones que faltan sean responsivas
 
-3) Editar el video definitivo
+2) Editar el video definitivo
 
-4) Ajustar el footer y páginas legales
-
-5) Carrito de compras
+3) Ajustar páginas legales

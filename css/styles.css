@@ -155,8 +155,8 @@ header{
 .Fila1{
     display: flex;
     width: 100%;
-    padding-left: 5rem;
-    padding-right: 3rem;
+    padding-left: 10%;
+    padding-right: 10%;
     justify-content: space-between;
     background-color:#004E64;
     color: #f9f7f3;
@@ -215,13 +215,62 @@ i:hover{
     margin-left: 5rem;
 }
 
-
 .menu{
     font-family: 'Karla';
     font-size: 1.5rem;
     display: flex; 
     width: 80%;
 }
+
+.menu-completo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.3rem;
+    background-color: #f9f7f3;
+    height: 4.5rem;
+}
+
+#menuItems{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    font-family: 'Karla';
+    font-size: 1.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+/* #menuItems > li, a{
+    color: #004E64;
+    text-decoration: none;
+}
+
+#menuItems > li, a:hover{
+    color: #ff6b6b;
+    text-decoration: underline;
+} */
+
+
+#hamburguesa{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #004E64;
+}
+
+#icono-menu {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#icono-menu.fa-xmark {
+    transform: rotate(90deg) scale(1.2);
+    color: #ff6b6b; 
+}
+
 ul{
     list-style: none;
     text-decoration: none;    
@@ -246,14 +295,6 @@ a:hover{
 
 a > i {
     color: #ff6b6b;
-}
-
-.menu-pc {
-    display: flex;
-}
-
-#menuResponsive {
-    display: none;
 }
 
 /* principal */
@@ -533,8 +574,6 @@ input:focus, textarea:focus{
     flex-direction: column;
 }
 
-
-
 .footer .col img {
     width: 5rem;
 }
@@ -592,7 +631,7 @@ input:focus, textarea:focus{
     box-shadow: gray 0.3rem 0.3rem;
 }
 
-.cardTours:hover {
+.cardTours:hover{
     transform: translateY(-0.5rem);
     background-color: #ec9e9e96;
 }
@@ -643,102 +682,225 @@ input:focus, textarea:focus{
     gap: 2rem;
 }
 
-
-
-
-/* Botón hamburguesa oculto por defecto */
-#hamburguesa{
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
+/* Carrito de Compras */
+.carritoCompras {
+    margin: 2rem auto;
+    border: 1px solid #004E64;
+    border-radius: 10px;
+    padding: 1.3rem;
+    width: 40%;
+    background-color: #ec9e9e;
+    color: #004E64;
 }
 
-/* Menú responsive hidden */
-#menuResponsive {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 60px;
-    right: 1rem;
-    border: 1px solid #ccc;
-    padding: 1rem;
+.carritoCompras h3{
+                justify-self: center;
 }
 
-
-
-
-
-/* Mobile */
-@media (max-width: 768px) {
-.Fila1,
-.subfila2b{
-    display: none;
-}
-
-.menu-pc{
-    display: none;
-}
-
-#menuResponsive{
-    display: none; /*se activa con JS*/
-    width: 100vw;        /* Usa todo el ancho de pantalla */
-    height: auto;
-    max-height: 90vh;    /* Que no se desborde */
-    overflow-y: auto;    /* Scroll si se pasa */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    flex-direction: column;
-}
-
-#hamburguesa{
-    display: block;
-}
-
-.menu-pc >nav{
-    display: none;
-}
-
-#menuResponsive ul{
-    list-style: none;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0;
-}
-
-#menuResponsive li{
-    padding: 0.5rem 2rem ;
-    border-bottom: 1px solid #ccc;
-    font-size: 1.4rem;
-    text-align: left;
-}
-
-  /* Oculta íconos solo en el menú responsive */
-#menuResponsive i{
-    display: none;
-}
-
-/* formulario */
-.formulario-contacto{
+.lista-carrito {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem 0;
 }
 
-.grupoFrm > textarea{
-    width: 100%; /* Que se adapte al ancho disponible */
+
+.lista-carrito li {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.3rem;
+    padding: 0.3rem 0.7rem;
+    font-family: 'Karla';
+    font-size: 1.1rem;
+    background-color: #f9f7f3
 }
 
-.form-boton{
-    grid-column: auto;
-    justify-content: center;
+.lista-carrito li div {
+    display: flex;
+    gap: 0.3rem;
 }
 
-.form-boton > button {
-    width: 30%;
+.btn-cantidad {
+    padding:0.5rem 0.7rem;
+    cursor: pointer;
+    border: 1px solid #dc3545;
+    border-radius: 0.3rem;
+    margin-bottom: 0.3rem;
+    background-color: #fff;
+    color:#004E64;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
 }
 
+.btn-cantidad:hover{
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    background-color: #004E64;
+    color: #ec9e9e;
 }
 
+.btn-eliminar {
+    padding:0.5rem 0.7rem;
+    cursor: pointer;
+    border: 1px solid #dc3545;
+    border-radius: 0.3rem;
+    margin-bottom: 0.3rem;
+    background-color: #dc3545;
+    color:#fff;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-eliminar:hover {
+    padding:0.5rem 0.7rem;
+    cursor: pointer;
+    background-color: #ec9e9e;
+    color: #dc3545;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.total-carrito,
+.cantidad-carrito {
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+} 
+
+
+/* --- Punto de quiebre intermedio (Tablet) --- */
+/* Pantallas menores o iguales a 1124px */
+@media (max-width: 1124px) {
+
+.Fila1, .subfila2b {
+                    display: none;
+}
+
+#menuItems {
+        display: none;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        width: 100vw;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 999;    
+}
+
+#menuItems.activo {
+        display: flex;
+}
+
+#menuItems > li{
+        padding: 0.3rem 1.5rem;
+        border-bottom: 2px solid #ccc;
+        text-align: left;
+        width: 80%;
+        margin: 0;
+}
+
+    #hamburguesa {
+        display: block;
+        position: relative;
+        z-index: 1000;
+        margin-left: 1rem;
+}
+
+    /* Contacto en una columna */
+    #contacto {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 2rem;
+    }
+
+    .formulario-contacto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-columna {
+        width: 100%;
+    }
+
+    .form-boton {
+        justify-content: center;
+    }
+
+    .mapa {
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+
+
+
+/* Mobile: <=500px */
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .titular {
+        padding: 2rem;
+    }
+
+    #inicial {
+        padding: 4rem 1rem;
+    }
+
+    .formulario-contacto {
+        padding: 0;
+    }
+
+    .form-boton > button {
+        width: 70%;
+    }
+
+    .cardRes {
+        width: 90%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .footer .col {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .redes {
+        justify-content: center;
+    }
+
+    .dst,
+    .dstpf {
+        align-items: center;
+        text-align: center;
+    }
+}
