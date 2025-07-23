@@ -13,14 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
         icono.classList.toggle("fa-xmark", !menuVisible);
     });
 
-    // Cierra el menú al hacer clic fuera
-    document.addEventListener("click", (e) => {
-        if (!btnMenu.contains(e.target) && !menu.contains(e.target)) {
-            menu.style.display = "none";
-            icono.classList.add("fa-bars");
-            icono.classList.remove("fa-xmark");
-        }
-    });
+document.addEventListener("click", (e) => {
+    const anchoPequeno = window.innerWidth <= 1124;
+    const clicFuera = !btnMenu.contains(e.target) && !menu.contains(e.target);
+
+    if (anchoPequeno && clicFuera) {
+    menu.style.display = "none";
+    icono.classList.add("fa-bars");
+    icono.classList.remove("fa-xmark");
+    }
+});
 
     // Cierra si agrandás la ventana a más de 1124px
     window.addEventListener("resize", () => {

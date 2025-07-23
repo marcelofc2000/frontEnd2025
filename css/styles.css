@@ -38,7 +38,7 @@ h5{
 }
 
 section{
-        padding: 12rem 5%;
+        padding: 7rem 5% 2rem;
         gap: 1rem;
         scroll-margin-top: 7rem;
 }
@@ -59,7 +59,7 @@ button{
     border: #ff6b6b 2px solid;
     padding: 0.5rem;
     margin-top: 0.5rem ;
-    border-radius: 10%;
+    border-radius: 0.5rem;
     background-color: #004E64;
     color: #ff6b6b;
     cursor: pointer;
@@ -69,7 +69,7 @@ button:hover{
     border: #004E64 2px solid;
     padding: 0.5rem;
     margin-top: 0.5rem ;
-    border-radius: 10%;
+    border-radius: 0.5rem;
     background-color: #ff6b6b;
     color: #004E64;
 }
@@ -521,13 +521,6 @@ span > i:hover{
     margin-top: 1rem;
 }
 
-.bot > button{
-    width: 25%;
-    
-    height: 3.5rem;
-
-}
-
 .form-boton > button {
     padding: 0.8rem 2rem;
     border-radius: 0.5rem;
@@ -654,35 +647,44 @@ input:focus, textarea:focus{
                 gap: 0.5rem;
 }
 .buttonCard{
-    font-size: 1rem;
+    font-size: 1.3rem;
+    padding: 0.70rem;
     border-radius: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 0.25rem;
-    padding-top: 0.25rem;
-    background-color: #EDEDED;
+    background-color: #004E64;
+    color: #ff6b6b;
     margin-top: 1rem;
     }
 
 .buttonCard:hover{
-    background-color: #004E64;
+    background-color: #f9f7f3;
     color: #ff6b6b;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 0.25rem;
-    padding-top: 0.25rem;
-}
-
-#contTours2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    margin-top: 1rem;
 }
 
 /* Carrito de Compras */
+#checkOut{
+    padding-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.mediosPago{
+    display: flex;
+    width: 30%;
+    margin: 2rem auto;
+    flex-direction: column;
+}
+
+.mediosPago h3{
+    margin-bottom: 1.5rem;
+    border-bottom: solid 0.2rem #dc3545;
+}
+.mediosPago i{
+    color: #004E64;
+    margin-right: 1.3rem;
+    font-size: 1rem;
+}
+
 .carritoCompras {
     margin: 2rem auto;
     border: 1px solid #004E64;
@@ -691,6 +693,9 @@ input:focus, textarea:focus{
     width: 40%;
     background-color: #ec9e9e;
     color: #004E64;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
 .carritoCompras h3{
@@ -772,6 +777,31 @@ input:focus, textarea:focus{
     border-top: 1px solid #eee;
 } 
 
+.boton-vaciar {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#vaciarCarrito{
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+#vaciarCarrito:hover{
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+
 
 /* --- Punto de quiebre intermedio (Tablet) --- */
 /* Pantallas menores o iguales a 1124px */
@@ -837,15 +867,16 @@ input:focus, textarea:focus{
     .mapa {
         margin-top: 2rem;
     }
+
+    #checkOut{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 }
 
-
-
-
-
-
-
-/* Mobile: <=500px */
+/* Mobile: <=600px */
 @media (max-width: 500px) {
 
     h1 {
@@ -903,4 +934,13 @@ input:focus, textarea:focus{
         align-items: center;
         text-align: center;
     }
+
+  #checkOut{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
 }

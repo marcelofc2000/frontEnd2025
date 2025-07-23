@@ -1,83 +1,84 @@
+
 const tours = [
-    {
-        id: "PM",
-        nombre: "Puerto Madero",
-        horario: "viernes 9 a 13",
-        precio: "7000",
-        foto: "./images/puertoMadero.jpg",
-        alt: "Foto de Puerto Madero",
+    { 
+        id: "PM", 
+        nombre: "Puerto Madero", 
+        horario: "viernes 9 a 13", 
+        precio: 7000, 
+        foto: "./images/puertoMadero.jpg", 
+        alt: "Foto de Puerto Madero" 
     },
-    {
-        id: "DT",
-        nombre: "Delta del Tigre",
-        horario: "sábado 9 a 13",
-        precio: "12000",
-        foto: "./images/deltaTigre.jpg",
-        alt: "Foto del Delta de Tigre",
+    { 
+        id: "DT", 
+        nombre: "Delta del Tigre", 
+        horario: "sábado 9 a 13", 
+        precio: 12000, 
+        foto: "./images/deltaTigre.jpg", 
+        alt: "Foto del Delta de Tigre" 
     },
-    {
-        id: "CH",
-        nombre: "Centro histórico",
-        horario: "sábado 12 a 15",
-        precio: "6000",
-        foto: "./images/centroHistorico.jpg",
-        alt: "Foto del Cabildo",
+    { 
+        id: "CH", 
+        nombre: "Centro histórico", 
+        horario: "sábado 12 a 15", 
+        precio: 6000, 
+        foto: "./images/centroHistorico.jpg", 
+        alt: "Foto del Cabildo" 
     },
-    {
-        id: "ST",
-        nombre: "San Telmo",
-        horario: "domingo 12 a 15",
-        precio: "7000",
-        foto: "./images/sanTelmo.jpg",
-        alt: "Foto de San Telmo",
+    { 
+        id: "ST", 
+        nombre: "San Telmo", 
+        horario: "domingo 12 a 15", 
+        precio: 7000, 
+        foto: "./images/sanTelmo.jpg", 
+        alt: "Foto de San Telmo" 
     },
-    {
-        id: "LB",
-        nombre: "La Boca",
-        horario: "domingo 16 a 18",
-        precio: "9000",
-        foto: "./images/laBoca.jpg",
-        alt: "Foto de La Boca",
+    { 
+        id: "LB", 
+        nombre: "La Boca", 
+        horario: "domingo 16 a 18", 
+        precio: 9000, 
+        foto: "./images/laBoca.jpg", 
+        alt: "Foto de La Boca" 
     },
-    {
-        id: "OB",
-        nombre: "Obelisco",
-        horario: "sab y dom 9 a 12",
-        precio: "9000",
-        foto: "./images/obelisco.jpg",
-        alt: "Foto de vista desde el Obelisco",
+    { 
+        id: "OB", 
+        nombre: "Obelisco", 
+        horario: "sab y dom 9 a 12", 
+        precio: 9000, 
+        foto: "./images/obelisco.jpg", 
+        alt: "Foto de vista desde el Obelisco" 
     },
-    {
-        id: "PA",
-        nombre: "Palermo",
-        horario: "sab y dom 14 a 18",
-        precio: "10000",
-        foto: "./images/palermo.jpg",
-        alt: "Foto del barrio de Palermo",
+    { 
+        id: "PA", 
+        nombre: "Palermo", 
+        horario: "sab y dom 14 a 18", 
+        precio: 10000, 
+        foto: "./images/palermo.jpg", 
+        alt: "Foto del barrio de Palermo" 
     },
-    {
-        id: "RE",
-        nombre: "Recoleta",
-        horario: "viernes 14 a 17",
-        precio: "8000",
-        foto: "./images/recoleta.jpg",
-        alt: "Foto del barrio de Recoleta",
+    { 
+        id: "RE", 
+        nombre: "Recoleta", 
+        horario: "viernes 14 a 17", 
+        precio: 8000, 
+        foto: "./images/recoleta.jpg", 
+        alt: "Foto del barrio de Recoleta" 
     },
-    {
-        id: "BE",
-        nombre: "Belgrano",
-        horario: "sábado 14 a 17",
-        precio: "9000",
-        foto: "./images/belgrano.jpg",
-        alt: "Foto del barrio de Belgrano",
+    { 
+        id: "BE", 
+        nombre: "Belgrano", 
+        horario: "sábado 14 a 17", 
+        precio: 9000, 
+        foto: "./images/belgrano.jpg", 
+        alt: "Foto del barrio de Belgrano" 
     },
-    {
-        id: "VL",
-        nombre: "Vicente López",
-        horario: "sábado 9 a 13",
-        precio: "7000",
-        foto: "./images/vlpz.jpg",
-        alt: "Foto de la costa de Vicente López",
+    { 
+        id: "VL", 
+        nombre: "Vicente López", 
+        horario: "sábado 9 a 13", 
+        precio: 7000, 
+        foto: "./images/vlpz.jpg", 
+        alt: "Foto de la costa de Vicente López" 
     },
 ];
 
@@ -85,18 +86,13 @@ let carrito = [];
 
 function agregarTourAlCarrito(idTour) {
     let tourEnCarrito = carrito.find(tour => tour.id === idTour);
-
     if (tourEnCarrito) {
         tourEnCarrito.cantidad++;
     } else {
         const tourOriginal = tours.find(tour => tour.id === idTour);
-        if (!tourOriginal) {
-            console.error(`No se encontró el tour con id ${idTour}`);
-            return;
-        }
+        if (!tourOriginal) return;
         carrito.push({ ...tourOriginal, cantidad: 1 });
     }
-
     actualizarCarritoHTML();
 }
 
@@ -109,84 +105,83 @@ function manejarClicComprar(evento) {
 
 function agregarTours() {
     const divTours = document.getElementById("contTours");
-
     for (const tour of tours) {
-        divTours.insertAdjacentHTML("beforeend",
-            `
+        divTours.insertAdjacentHTML("beforeend", `
             <div class="cardTours">
                 <img src="${tour.foto}" alt="${tour.alt}">
                 <h3>${tour.nombre}</h3>
                 <span>${tour.horario}</span>
                 <h5>$${tour.precio}</h5> 
                 <button class="buttonCard" type="button" data-id="${tour.id}">Comprar</button> 
-            </div>
-            `
-        );
+            </div>`);
     }
-
     divTours.addEventListener("click", manejarClicComprar);
 }
 
 function manejarClicCarrito(evento) {
     const target = evento.target;
-
     if (target.dataset && target.dataset.id && target.dataset.action) {
         const tourId = target.dataset.id;
         const accion = target.dataset.action;
-
-        if (accion === "eliminar") {
-            eliminarProductoDelCarrito(tourId);
-        } else if (accion === "restar") {
-            restarCantidadProducto(tourId);
-        } else if (accion === "sumar") {
-            sumarCantidadProducto(tourId);
-        }
+        if (accion === "eliminar") eliminarProductoDelCarrito(tourId);
+        else if (accion === "restar") restarCantidadProducto(tourId);
+        else if (accion === "sumar") sumarCantidadProducto(tourId);
     }
 }
 
 function actualizarCarritoHTML() {
-    const carritoCompras = document.querySelector(".carritoCompras");
+    const contenedor = document.querySelector(".carritoCompras");
+    if (!contenedor) return;
 
-    if (!carritoCompras) {
-        console.error("No se encontró el contenedor del carrito");
+    const wrapper = contenedor.querySelector(".carrito-wrapper");
+    if (!wrapper) {
+        console.error("Falta el div .carrito-wrapper dentro de .carritoCompras");
         return;
     }
 
-    carritoCompras.innerHTML = `
+    wrapper.innerHTML = `
         <h3>Tu Compra</h3>
         <ul class="lista-carrito"></ul>
         <p class="total-carrito"></p>
         <p class="cantidad-carrito"></p>
-    `;
+        <div class="boton-vaciar">
+            <button id="vaciarCarrito" class="buttonCard">Vaciar Carrito</button>
+        </div>`;
 
-    const listaCarrito = carritoCompras.querySelector(".lista-carrito");
-    let totalPagar = 0;
-    let cantidadProductosUnicos = 0;
+    const lista = wrapper.querySelector(".lista-carrito");
+    let total = 0;
 
     if (carrito.length === 0) {
-        listaCarrito.innerHTML = "<p>El carrito está vacío.</p>";
+        lista.innerHTML = "<p>El carrito está vacío.</p>";
     } else {
-        for (const item of carrito) {
+        carrito.forEach(item => {
             const li = document.createElement("li");
             li.innerHTML = `
                 <span>${item.nombre} - $${item.precio} x ${item.cantidad}</span>
                 <div>
-                    <button class="btn-cantidad" data-id="${item.id}" data-action="restar"><i class="fa-solid fa-minus"></i></button>
-                    <button class="btn-cantidad" data-id="${item.id}" data-action="sumar"><i class="fa-solid fa-plus"></i></button>
-                    <button class="btn-eliminar" data-id="${item.id}" data-action="eliminar"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-            `;
-            listaCarrito.appendChild(li);
-
-            totalPagar += parseInt(item.precio) * item.cantidad;
-            cantidadProductosUnicos++;
-        }
+                    <button class="btn-cantidad" data-id="${item.id}" data-action="restar">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <button class="btn-cantidad" data-id="${item.id}" data-action="sumar">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="btn-eliminar" data-id="${item.id}" data-action="eliminar">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>`;
+            lista.appendChild(li);
+            total += item.precio * item.cantidad;
+        });
     }
 
-    carritoCompras.querySelector(".total-carrito").textContent = `Total a pagar: $${totalPagar}.-`;
-    carritoCompras.querySelector(".cantidad-carrito").textContent = `Tours Elegidos: ${cantidadProductosUnicos}`;
+    wrapper.querySelector(".total-carrito").textContent = `Total a pagar: $${total}`;
+    wrapper.querySelector(".cantidad-carrito").textContent = `Tours Elegidos: ${carrito.length}`;
 
-    listaCarrito.addEventListener("click", manejarClicCarrito);
+    lista.addEventListener("click", manejarClicCarrito);
+    wrapper.querySelector("#vaciarCarrito").addEventListener("click", () => {
+        carrito = [];
+        actualizarCarritoHTML();
+    });
 }
 
 function sumarCantidadProducto(idProducto) {
@@ -217,3 +212,6 @@ function eliminarProductoDelCarrito(idProducto) {
 // Inicialización
 agregarTours();
 actualizarCarritoHTML();
+
+console.log("Carrito actualizado. ¿Está el menú?", document.querySelector(".menu"));
+
