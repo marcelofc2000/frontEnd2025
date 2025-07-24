@@ -22,7 +22,7 @@ const tours = [
         horario: "sábado 12 a 15", 
         precio: 6000, 
         foto: "./images/centroHistorico.jpg", 
-        alt: "Foto del Cabildo" 
+        alt: "Foto del Cabildo de Buenos Aires" 
     },
     { 
         id: "ST", 
